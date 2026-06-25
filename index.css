@@ -115,9 +115,51 @@ a {
   white-space: nowrap;
 }
 
+.nav-menu .icon-link,
+.nav-menu .nav-icon-link {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.nav-menu .icon-link:hover,
+.nav-menu .icon-link:focus-visible,
+.nav-menu .nav-icon-link:hover,
+.nav-menu .nav-icon-link:focus-visible {
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-menu .icon-link svg,
+.nav-menu .icon-link img,
+.nav-menu .nav-icon-link svg,
+.nav-menu .nav-icon-link img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+}
+
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
   color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .nav-menu .icon-link {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-menu .icon-link svg,
+  .nav-menu .icon-link img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .hero {
